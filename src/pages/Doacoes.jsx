@@ -1,7 +1,6 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { fazerDoacao } from "../services/api";
+import { fazerDoacao, getProjetos } from "../services/api";
 import "../styles/doacaoStyles.css";
 
 const DoacaoPage = () => {
@@ -16,8 +15,7 @@ const DoacaoPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios
-      .get("http://localhost:8090/api/projetos")
+    getProjetos()
       .then((response) => setProjetos(response.data))
       .catch((error) => console.error("Erro ao carregar projetos:", error));
     setUsuarioId(localStorage.getItem("usuarioId"));

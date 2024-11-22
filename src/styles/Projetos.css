@@ -1,12 +1,12 @@
 .container-projetos {
   display: flex;
   align-items: center;
-  height: 80vh;
+  height: 100%;
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
   flex-direction: column;
   justify-content: center;
-  padding-top: 100px;
+  padding-top: 10%;
   gap: 20px;
   width: 100%;
 }
