@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = new axios.create({
-  baseURL: "http://localhost:8090/",
+  baseURL: "https://cleanenergy.onrender.com/",
 });
 
 api.interceptors.request.use((config) => {
