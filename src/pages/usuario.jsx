@@ -22,7 +22,7 @@ const Usuario = () => {
         const usuarioId = localStorage.getItem("usuarioId"); // Assumindo que o ID do usuário logado está armazenado no localStorage
         if (usuarioId) {
           const response = await api.get(`/doacoes/usuario/${usuarioId}`);
-          return setDoacoes(response.data);
+          return setDoacoes(response.data.content);
         }
       } catch (error) {
         if (error.response.status === 401) {
